@@ -39,14 +39,14 @@ function Form({ setRefresh, heading }) {
   
   function onSubmit(formData) {
    if(colorState){
-    axios.post("http://localhost:8000/api/v1/fan/submit-fan", formData).then((response) => {
+    axios.post("/api/v1/fan/submit-fan", formData).then((response) => {
       alert("Success");
     })  .catch((err) => {
       alert("Error")
     })
    }
    else{
-    axios.post("http://localhost:8000/api/v1/talent/submit-talent", formData).then((response) => {
+    axios.post("/api/v1/talent/submit-talent", formData).then((response) => {
      
       alert("Succes");
     })
