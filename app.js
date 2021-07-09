@@ -36,7 +36,7 @@ app.use(cors());
 
 var db;
 
-MongoClient.connect('mongodb+srv://m001-student:anasanas@cluster0.zciek.mongodb.net/machine-test?retryWrites=true&w=majority',{useUnifiedTopology:true}, function (err, data) {
+MongoClient.connect(process.env.DB_URL,{useUnifiedTopology:true}, function (err, data) {
 
   if (err) {
     console.log(err)}
