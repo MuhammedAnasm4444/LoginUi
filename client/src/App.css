@@ -1,0 +1,147 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(./Poppins-Regular.ttf);
+}
+body {
+  background: #000000;
+  font: 'poppins';
+}
+
+.centering {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+.App {
+  font-family:MyFirstFont;
+}
+small {
+  color: gray;
+}
+.main-form {
+  background: #242424;
+    border-radius: 60px;
+    width: 55%;
+}
+.title {
+  color: #6ae37e;
+}
+.ip {
+  border-radius: 50px;
+  border: 2px #6ae37e solid;
+  background: #242424;
+  width: 100%;
+}
+
+.button-1 {
+  border: none;
+}
+input[type="text"] {
+  font-size: 80%;
+}
+input:focus {
+  background-color: #242424;
+  text-decoration: none;
+  outline: none;
+}
+.foot-text {
+  color: #4b5050;
+}
+
+.search-input {
+  border-radius: 15px;
+  background: none;
+  border: 2px solid #6ae37e;
+}
+.search-input::after {
+  content: "j";
+}
+.searchInputWrapper {
+  position: relative;
+}
+
+.searchInput {
+  
+  transition: transform 0.1s ease-in-out;
+  width: 20rem;
+  height: 2rem;
+  padding: 0 1rem;
+  border-radius: 2rem;
+  border: 2px solid #6ae37e;
+  background: none;
+
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+::placeholder {
+  color: #a1a1a1;
+}
+
+/* hide the placeholder text on focus */
+:focus::placeholder {
+  text-indent: -999px;
+}
+
+.searchInput:focus {
+  outline: none;
+  /* transform: scale(1.1);
+  transition: all 0.1s ease-in-out; */
+  background: none;
+}
+
+.searchInputIcon {
+  position: absolute;
+  right: 0.8rem;
+  top: 0.5rem;
+  color: #a1a1a1;
+  transition: all 0.1s ease-in-out;
+}
+
+.container:focus-within > .searchInputWrapper > .searchInputIcon {
+  right: 0.2rem;
+}
+.button-2 {
+  border: none;
+}
+.signup-button {
+  border: none;
+  background: #6ae37e;
+}
+
+@media only screen and (max-width: 1000px) {
+  .main-form {
+    background: #242424;
+    border-radius: 60px;    ;
+    width: auto;
+  }
+  
+}
+@media only screen and (max-width: 375px) {
+  .toggle-button {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .searchInput {
+    transition: transform 0.1s ease-in-out;
+    width: 12rem;
+    height: 2rem;
+    padding: 0 1rem;
+    border-radius: 2rem;
+    border: 2px solid green;
+    background: none;
+}
+.centering {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-left: 0rem;
+  margin-right: 0rem;
+
+}
+}
