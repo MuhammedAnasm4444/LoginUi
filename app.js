@@ -55,12 +55,18 @@ app.post('api/v1/fan/submit-fan', (req, res) => {
   db.collection('fan').insertOne(req.body).then(() => {
     res.status(200).json({message:"Success"})
   })
+  .catch((err) =>{
+    res.status(500).json({message:"server erro"})
+  })
 })
 
 app.post('api/v1/talent/submit-talent', (req, res) => {
   console.log(req.body)
   db.collection('talent').insertOne(req.body).then(() => {
     res.status(200).json({message:"Success"})
+  })
+  .catch((err) =>{
+    res.status(500).json({message:"server error"})
   })
 })
 const port = process.env.PORT || 8000;
